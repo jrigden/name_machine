@@ -7,8 +7,8 @@ function toTitleCase(str)
 }
 
 function loadData() {
-    //$.getJSON("https://rpg.rigden.us/seeds_of_infinity/resources/json/names.json", function(json_response) {
-    $.getJSON("names.json", function(json_response) {
+    $.getJSON("https://rpg.rigden.us/seeds_of_infinity/resources/json/names.json", function(json_response) {
+    //$.getJSON("names.json", function(json_response) {
 
         name_data = json_response.data;
         name_data.all_first_names = [];

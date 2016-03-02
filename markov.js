@@ -38,14 +38,14 @@ function apostrophize(word) {
 
 function loadData() {
     $.when(
-        $.getJSON("json/first_name_chain.json", function(data) {
+        //$.getJSON("json/first_name_chain.json", function(data) {
+        .getJSON("https://rpg.rigden.us/name_machine/json/first_name_chain.json", function(data) {
             first_name_bundle = data.data;
         }),
-        $.getJSON("json/last_name_chain.json", function(data) {
+        $.getJSON("https://rpg.rigden.us/name_machine/json/last_name_chain.json", function(data) {
             last_name_bundle = data.data;
         })
         ).then(function() {
-            console.log("ssss")
             renderName();
             $( "#chain_name_button" ).click(function() {
                 renderName();
